@@ -5,18 +5,22 @@ set -euo pipefail
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 FILES="reference/vrouter \
+       reference/arm64/vrouter \
        util/filter-net/config.json \
        util/filter-net/nodes.json \
        util/filter-net/ref-router.lnx \
        util/filter-net/your-router.lnx \
        util/filter-net/tester.lnx \
        util/test_sender \
+       util/test_sender.arm64
        util/vnet_filter_run \
        util/vnet_run"
 
 TO_EXEC="
        reference/vrouter \
+       reference/arm64/vrouter \
        util/test_sender \
+       util/test_sender.arm64 \
        util/vnet_filter_run \
        util/vnet_run"
 
