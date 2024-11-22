@@ -1,0 +1,12 @@
+# Configuration for your-router
+
+interface if0 192.168.0.1/24 127.0.0.1:5001 # incoming
+neighbor 192.168.0.2 at 127.0.0.1:5000 via if0 # tester
+
+interface if1 192.168.1.1/24 127.0.0.1:5002 # to ref-router
+neighbor 192.168.1.2 at 127.0.0.1:5003 via if1 # ref-router
+
+
+routing static
+route 10.0.0.0/8 via 192.168.1.2
+

@@ -1,0 +1,14 @@
+{
+    "tester": {
+	"skip_config": true,
+	"binary_path": "/bin/bash",
+	"extra_args": ""
+ },
+    "r1": {
+	"binary_path": "./vrouter"
+    },
+    "r2": {
+	"binary_path": "reference/vrouter",
+	"extra_args": "--no-neighbor-warning"
+    }
+}

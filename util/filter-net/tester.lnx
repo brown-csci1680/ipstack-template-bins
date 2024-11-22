@@ -1,0 +1,10 @@
+# Auto-generated configuration for h1
+
+interface if0 192.168.0.2/24 127.0.0.1:5000 # to network r1-left
+neighbor 192.168.0.1 at 127.0.0.1:5001 via if0 # r1
+
+
+routing static
+
+# Default route
+route 0.0.0.0/0 via 192.168.0.1
