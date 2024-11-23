@@ -9,6 +9,6 @@
     },
     "r2": {
 	"binary_path": "reference/vrouter",
-	"extra_args": "--no-neighbor-warning"
+	"extra_args": "--no-neighbor-warning --print-tcp"
     }
 }
