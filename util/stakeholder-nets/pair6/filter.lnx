@@ -1,0 +1,12 @@
+# Configuration for filter
+
+interface if0 10.20.0.1/16 127.0.0.1:5001 # to inside
+neighbor 10.20.0.2 at 127.0.0.1:5000 via if0 # inside router
+
+interface if1 192.168.1.1/24 127.0.0.1:5002 # to outside
+neighbor 192.168.1.2 at 127.0.0.1:5003 via if1 # to outside
+
+
+routing static
+route 0.0.0.0/0 via 192.168.1.2
+route 10.10.0.0/16 via 10.20.0.2

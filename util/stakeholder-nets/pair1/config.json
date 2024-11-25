@@ -1,0 +1,13 @@
+{
+    "inside": {
+	"binary_path": "reference/vrouter",
+	"extra_args": "--no-neighbor-warning --print-tcp"
+ },
+    "filter": {
+	"binary_path": "./vrouter"
+    },
+    "outside": {
+	"binary_path": "reference/vrouter",
+	"extra_args": "--no-neighbor-warning --print-tcp"
+    }
+}

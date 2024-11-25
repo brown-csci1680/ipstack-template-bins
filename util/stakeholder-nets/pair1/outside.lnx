@@ -1,0 +1,11 @@
+# Configuration for outside
+
+interface if0 192.168.1.2/24 127.0.0.1:5003 # router
+neighbor 192.168.1.1 at 127.0.0.1:5002 via if0 # router
+
+interface if1 10.0.0.1/8 127.0.0.1:5004 # to external (wireshark)
+neighbor 10.0.0.2 at 127.0.0.1:5005 via if1 # does not exist (will just show up in wireshark)
+
+
+routing static
+route 10.33.7.0/24 via 192.168.1.1
