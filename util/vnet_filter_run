@@ -156,8 +156,7 @@ def main(input_args):
                         help="Run nodes using binaries.json  Overrides  --router and --ref-router")
     parser.add_argument("--clean", action="store_true",
                         help="Terminate any open virtual network sessions before starting")
-    parser.add_argument("--lnx-dir", type=str, help="Directory with lnx files",
-                        default=FILTER_NET_PATH)
+    parser.add_argument("lnx_dir", type=str, help="Directory with lnx files")
     parser.add_argument("extra_args", nargs="*",
                         help="Extra arguments to add when executing your node", default="")
     parser.add_argument("--verbose", action="store_true",
@@ -188,16 +187,15 @@ def main(input_args):
     _extra_args_str = " ".join(args.extra_args)
 
     default_bin_config = {
-        "tester": {
-            "skip_config": True,
-            "binary_path": "/bin/bash",
-            "extra_args": ""
+        "inside": {
+            "binary_path": str(ref_router_bin),
+            "extra_args": "--no-neighbor-warning --print-tcp"
         },
-        "your-router": {
+        "filter": {
             "binary_path": str(test_router_bin),
             "extra_args": _extra_args_str,
         },
-        "ref-router": {
+        "outside": {
             "binary_path": str(ref_router_bin),
             "extra_args": "--no-neighbor-warning --print-tcp",
         },
