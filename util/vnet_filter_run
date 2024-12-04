@@ -148,7 +148,7 @@ def main(input_args):
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--router", type=str, default="", help="Path to your vrouter binary")
+    parser.add_argument("--router", type=str, default="./vrouter", help="Path to your vrouter binary")
     parser.add_argument("--ref-router", type=str,
                         help="Path to reference router",
                         default=REFERENCE_PATH/"vrouter")
