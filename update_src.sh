@@ -81,6 +81,7 @@ main() {
     echo "any unsaved changes to your git repository."
     echo ""
     echo "Press Enter to continue, Ctrl+C to exit."
+    read
 
     # Download all files
     for target in $FILES; do
@@ -105,6 +106,7 @@ main() {
     echo "About to add all fetched files to git"
     echo ""
     echo "Press Enter to continue, Ctrl+C to exit."
+    read
 
     # Add everything to git
     for target in $FILES; do
