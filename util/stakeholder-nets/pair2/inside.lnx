@@ -4,7 +4,7 @@ interface if0 192.168.0.2/24 127.0.0.1:5000 # to filter
 neighbor 192.168.0.1 at 127.0.0.1:5001 via if0 # filter
 
 interface if1 10.33.7.1/24 127.0.0.1:5100
-neighbor 10.33.7.100 at 127.0.0.1:5101 via if1 # does not exist (will just show up in wireshark)
+neighbor 10.33.7.254 at 127.0.0.1:5101 via if1 # does not exist (will just show up in wireshark)
 
 routing static
 

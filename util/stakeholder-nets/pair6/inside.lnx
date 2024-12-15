@@ -9,4 +9,4 @@ neighbor 10.10.0.1 at 127.0.0.1:5101 via if1 # does not exist (will just show up
 routing static
 
 # Default route
-route 0.0.0.0/0 via 192.168.0.1
+route 0.0.0.0/0 via 10.20.0.1
